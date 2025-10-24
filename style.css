@@ -79,12 +79,18 @@ nav ul {
   transition: transform 0.5s ease-in-out;
 }
 
+.menu-icon:hover{
+    cursor: pointer;
+}
+
 nav ul.open {
   transform: translateX(0%);
 }
 
 nav ul li {
   margin: 1.2em 0;
+  padding: 0.5rem;
+  
 }
 
 nav ul li:nth-of-type(1) {
@@ -95,6 +101,10 @@ nav ul li:nth-of-type(1) {
 nav ul a {
   text-decoration: none;
   color: inherit;
+
+  &:hover{
+    color: orange;
+  }
 }
 
 /* Responsive */

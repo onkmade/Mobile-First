@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 body, html {
   font-family: "Inter", sans-serif;
   background-color: rgb(234, 234, 234);
@@ -64,7 +69,7 @@ header .s-gp svg {
 
 /* Navigation */
 nav ul {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   text-align: end;
   padding: 1.5em;
   position: fixed;
@@ -94,17 +99,24 @@ nav ul li {
 }
 
 nav ul li:nth-of-type(1) {
-  margin-bottom: 1.5em;
   margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
 nav ul a {
   text-decoration: none;
-  color: inherit;
+  color: #6d6d6d;
 
   &:hover{
     color: orange;
   }
+}
+
+.inner .logo{
+  font-size: larger;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: #333333;
 }
 
 /* Responsive */
@@ -134,4 +146,13 @@ nav ul a {
   nav ul li {
     margin: 0;
   }
+}
+
+@media (min-width:900px) {
+      
+    .wrap {
+      margin: 0.5em;
+      padding: 0 7rem;
+      margin-inline: auto;
+    }
 }

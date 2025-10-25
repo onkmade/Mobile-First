@@ -20,15 +20,15 @@
                 <input type="search" name="" id="search" placeholder="Browse Anime">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
             </div>
-            <a href="" class="open-menu">
+            <button href="" class="open-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-chevron-left-icon lucide-circle-chevron-left"><circle cx="12" cy="12" r="10"/><path d="m14 16-4-4 4-4"/></svg>
-            </a>
+            </button>
             <nav>
                 <ul>
                     <li>
-                        <a href="" class="close-menu">
+                        <button href="" class="close-menu">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-chevron-right-icon lucide-circle-chevron-right"><circle cx="12" cy="12" r="10"/><path d="m10 8 4 4-4 4"/></svg>
-                        </a>
+                        </button>
                     </li>
                     <li><a href="">Home</a></li>
                     <li><a href="">Categories</a></li>
@@ -38,6 +38,107 @@
                 </ul>
             </nav>
         </header>
+        <main>
+            <h3 class="option_1">All</h3>
+            <section class="all">
+                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_1.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Sakamoto Days</h3>
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button></div>
+                        </div>
+                </article>
+
+                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_2.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Jujutsu Kaisen</h3>
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button></div>
+                        </div>
+                </article>
+
+                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_3.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Spy X Family</h3>
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button></div>
+                        </div>
+                </article>
+
+                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_4.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Spy X Family</h3>
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button></div>
+                        </div>
+                </article>
+                                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_1.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Sakamoto Days</h3>
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button></div>
+                        </div>
+                </article>
+
+                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_2.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Jujutsu Kaisen</h3>
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button></div>
+                        </div>
+                </article>
+
+                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_3.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Spy X Family</h3>
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="img-container">
+                        <img src="/Images/Img_4.jpeg" alt="">
+                    </div>
+                    <div class="info-article">
+                        <h3>Spy X Family</h3> 
+                        <div class="btn-grp">
+                            <button class="status-tag">On-Going</button>
+                            <button class="ATL">Add to List</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
     </div>
 
     <!-- Script here -->
@@ -54,8 +155,8 @@
         openBtn.addEventListener('click', (e) => {
             e.preventDefault(); 
             menu.classList.add('open');
-        });
-        
+        });   
     </script>
+
 </body>
 </html>

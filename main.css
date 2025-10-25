@@ -1,0 +1,134 @@
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* Base / Mobile (Xs: 0-474px) */
+    --font-size-body:16px;
+    --padding-container:0.5rem;
+    --margin-section:1rem;
+    --gap-container:0.5rem;
+    --svg-icons:22px;
+
+    /* SM (475 - 640px) */
+    @media (min-width:475px) {
+        :root{
+
+            --font-size-body:16px;
+            --padding-container:1rem;
+            --margin-section:1rem;
+            --gap-container:1rem;
+        }
+    }
+
+    /* MD ( 640px - 767px) */
+    @media (min-width:640px) {
+        :root{
+            --font-size-body:18px;
+            --padding-container:1.5rem;
+            --margin-section:1.5rem;
+            --gap-container:1.5rem;
+        }
+    }
+
+    /* LG - 768px to 1023px */
+    @media (min-width:640px) {
+        :root{
+            --font-size-body:20px;
+            --padding-container:2rem;
+            --margin-section:2rem;
+            --gap-container:2rem;
+        }
+    }
+
+    /* 2XL: 1280–1535px+ */
+    @media (min-width: 1280px) {
+    :root {
+            --font-size-body: 22px;
+            --padding-container: 2.5rem;
+            --margin-section: 2.5rem;
+            --gap-container: 2.5rem;
+        }
+    }
+
+    /* COLOR SECTIONS */
+    --text-color:#222;
+    --svg-color-primary:#505050;
+}
+
+body{
+    font-family: "Inter";
+    line-height: 1.5;   
+    background-color: #fafafa;
+}
+
+.wrap{
+    margin: var(--margin-section);
+    margin-inline: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+svg{
+    width: var(--svg-icons);
+    height: var(--svg-icons);
+    vertical-align: middle;
+    stroke: var(--svg-color-primary);
+}
+li{
+    list-style: none;
+}
+
+header{
+    display:flex;
+    padding: var(--padding-container);
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    gap: var(--gap-container);
+    /* background-color: yellowgreen; */
+
+    .search-grp{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        gap: var(--gap-container);
+        padding: var(--padding-container);
+        border-radius: 6px;
+        width: 100%;
+
+        input{
+            border: none;
+            outline: transparent;
+            background: none;
+        }
+    }
+}
+
+header nav{
+    text-align: end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(100%);
+    
+    & ul{
+        background-color: white;
+        padding: var(--padding-container);
+        height: 100%;
+        
+        & li{
+            margin:var(--margin-section) 0;
+
+        }
+    }
+}

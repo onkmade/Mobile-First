@@ -7,29 +7,45 @@ We will build the mobile-first design using HTML for the foundational content, C
 
 # TO achieve Mobile-First Design
 
-```css
+```yaml
 Screen width →
 
-|---------|---------|---------|---------|---->
-0       600px      768px    1024px    1440px
+|--------|--------|--------|--------|--------|-------->
+0       475      640      768      1024     1280    1536px
 
-| Mobile  | Tablet  | Desktop | Large Desktop |
+base | mobile | tablet | small desktop | desktop | large desktop
+# Breakpoints
+XS: 0–474px
+SM: 475–639px
+MD: 640–767px
+LG: 768–1023px
+XL: 1024–1279px
+2XL: 1280–1535px+
 
-Font size:
-Mobile:      16px
-Tablet:      18px
-Desktop:     20px
-Large Desktop: 22px
+# Example Settings
+
+Font size (body):
+XS (0–474px):       16px
+SM (475–639px):     16px
+MD (640–767px):     18px
+LG (768–1023px):    20px
+XL (1024–1279px):   20px
+2XL (1280–1535px+): 22px
 
 Padding (container):
-Mobile:      1rem
-Tablet:      1.5rem
-Desktop:     2rem
-Large Desktop: 2.5rem
+XS:   1rem
+SM:   1rem
+MD:   1.5rem
+LG:   2rem
+XL:   2rem
+2XL:  2.5rem
 
 Margin (sections / elements):
-Mobile:      1rem
-Tablet:      1.5rem
-Desktop:     2rem
-Large Desktop: 2.5rem
+XS:   1rem
+SM:   1rem
+MD:   1.5rem
+LG:   2rem
+XL:   2rem
+2XL:  2.5rem
+
 ```

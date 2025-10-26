@@ -8,9 +8,25 @@
 
 body{
     font-family: "Inter";
-    min-height: 100vh;
     width: 100vw;
     background: transparent;
-
+    
     /* Having vh and vw makes the layout responsive on any device */
+}
+
+.buddle{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.content{
+    flex: 1;
+
+}
+
+footer{
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1rem 0;
 }

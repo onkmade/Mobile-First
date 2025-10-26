@@ -34,4 +34,21 @@ footer{
 
 header{
     display: flex;
+    background-color: yellowgreen;
+    justify-content: space-between;
+    align-items: center;
+}
+header .search-grp{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(211, 211, 211);
+    padding: 0.35rem 0.5rem;
+    gap: 0.5rem;
+}
+
+header input{
+    outline: transparent;
+    border: none;
+    background: none;
 }

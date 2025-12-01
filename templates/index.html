@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
+    <title>Form</title>
 </head>
 <body>
-    <div class="wrapper">
-        <form action="/" method="POST">
-            <label for="">Enter your Name:</label>
-            <input type="text" name="" id="username">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <form action="/" method="POST">
+        <input type="text" name="username" placeholder="Enter name">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

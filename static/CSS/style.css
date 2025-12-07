@@ -13,15 +13,18 @@
     width: 100%;
 }
 
-header,footer{
-    background-color: rgb(17, 7, 7);
+header{
+    background-color: rgb(224, 224, 224);
     padding: 0.75rem;
     text-align: center;
-    color: white;
+    color: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 a.links{
-    color:white;
+    color: #222222;
     text-decoration: none;
     margin: 0 10px;
 }

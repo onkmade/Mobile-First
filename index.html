@@ -83,13 +83,26 @@
                 <div class="tab-container">
                     <!-- Tav Navigation -->
                     <nav class="tab-nav">
-                        <button class="tab-btn active" role="tab" data-tab="Board" aria-selected="true" aria-controls="board-panel">Board</button>
-                        <button class="tab-btn" role="tab" data-tab="List" aria-selected="false" aria-controls="list-panel">List</button>
-                        <button class="tab-btn" role="tab" data-tab="Timeline" aria-selected="false" aria-controls="timeline-panel">Timeline</button>
-                        <button class="tab-btn" role="tab" data-tab="Due-Dates" aria-selected="false" aria-controls="duedates-panel">Due Dates</button>
-                        <button class="tab-btn" role="tab" data-tab="Delay-Tasks" aria-selected="false" aria-controls="delaytasks-panel">Delay Tasks</button>
+                        <div class="tab-options">
+                            <button class="tab-btn active" role="tab" data-tab="Board" aria-selected="true" aria-controls="board-panel">Board</button>
+                            <button class="tab-btn" role="tab" data-tab="List" aria-selected="false" aria-controls="list-panel">List</button>
+                            <button class="tab-btn" role="tab" data-tab="Timeline" aria-selected="false" aria-controls="timeline-panel">Timeline</button>
+                            <button class="tab-btn" role="tab" data-tab="Due-Dates" aria-selected="false" aria-controls="duedates-panel">Due Dates</button>
+                            <button class="tab-btn" role="tab" data-tab="Delay-Tasks" aria-selected="false" aria-controls="delaytasks-panel">Delay Tasks</button>
+                        </div>
+                        <div class="corner-tab-btn">
+                            <button class="cor-btn filter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sliders-horizontal-icon lucide-sliders-horizontal"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg>
+                                Filter
+                            </button>
+                            <button class="cor-btn sort">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-up-icon lucide-arrow-down-up"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
+                                Sort
+                            </button>
+                        </div>
                     </nav>
 
+                    <div class="gradient-seperator"></div>
                     <!-- Tabs Panel -->
                     <div class="tab-content">
                         <div class="tab-panel active" id="board-panel" role="tabpanel" aria-labelledby="Board">
@@ -123,7 +136,45 @@
         </div>
     </div>
     <script>
-        
+        document.addEventListener('DOMContentLoaded', () => {
+       const tabs = document.querySelectorAll('.tab-btn');
+       const panels = document.querySelectorAll('.tab-panel');
+            
+       tabs.forEach(tab => {
+           tab.addEventListener('click', () => {
+               // Deactivate all current tabs
+               tabs.forEach(t => {
+                   t.classList.remove('active');
+                   t.setAttribute('aria-selected', 'false');
+               });
+           
+               // Hide all current panels
+               panels.forEach(p => {
+                   p.classList.remove('active');
+                   p.setAttribute('hidden', true);
+               });
+           
+               // Activate the clicked tab
+               tab.classList.add('active');
+               tab.setAttribute('aria-selected', 'true');
+           
+               // Show the target panel using aria-controls
+               const targetPanelId = tab.getAttribute('aria-controls'); // Get the ID directly from aria-controls
+               const targetPanel = document.getElementById(targetPanelId);
+           
+               if (targetPanel) {
+                   targetPanel.classList.add('active');
+                   targetPanel.removeAttribute('hidden');
+               }
+           });
+       });
+   
+       // Optional: Automatically click the first tab on page load to ensure initial state is correct
+       if (tabs.length > 0) {
+           tabs[0].click();
+       }
+    });
+
     </script>
 </body>
 </html>

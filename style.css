@@ -76,7 +76,7 @@ svg{
     display:flex;
     align-items: center;
     gap: 0.5rem;
-    width: 100%;
+    width: 15rem;
     padding: 0.75rem 0.5rem;
     transition: background-color 0.2s;
 }
@@ -164,7 +164,16 @@ svg{
 
 .tab-nav{
     display: flex;
-    border-bottom: 1px solid var(--separator-color);
+    /* border-bottom: 1px solid linear-gradient(to right, black, rgba(0, 0, 0, 0.126)); */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gradient-seperator{
+    height: 1px;
+    background: linear-gradient(to right, 
+    var(--separator-color), 
+    rgb(0 0 0 / 0 ));
 }
 
 .tab-btn{
@@ -182,7 +191,7 @@ svg{
     color: var(--text-color);
 }
 
-.tab-btn:active{
+.tab-btn.active{
     color: var(--text-color);
     font-weight: 500;
 }
@@ -202,12 +211,56 @@ svg{
     line-height: 1.5;
 }
 
+.tab-panel {
+    padding-top: 1rem;
+    display: none; 
+    width: 100%;
+}
+
 .tab-panel[hidden]{
     display: none;
 }
 
+.tab-btn:not(.active):hover {
+    color: var(text);
+}
+
 .tab-panel.active{
     display: block;
+}
+
+.corner-tab-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cor-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid var(--secondary-text);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--secondary-text);
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    & svg{
+        width: 18px;
+        height: 18px;
+        vertical-align: center;
+    }
+}
+
+.cor-btn:hover{
+    color: var(--text-color);
+    border-color: var(--text-color) ;
 }
 
 /* ================= Main FOOTER */
@@ -216,6 +269,3 @@ svg{
     padding: 0.75rem 0.5rem;
     text-align: center;
 }
-
-
-

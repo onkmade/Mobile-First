@@ -8,6 +8,11 @@
     --hover-bg: #333333;
     --separator-color: #444;
     --delete-color: #ff4d4d;
+    --link-color: #4ea1ff;
+    --border-color: #555;
+    --border-radius: 6px;
+    --border-width: 1px;
+    --border-style: solid;
 }
 
 ```

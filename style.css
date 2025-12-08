@@ -48,13 +48,7 @@ body{
     flex-grow: 1;
     display: grid;
     grid-template-rows: auto 1fr auto;
-}
-
-.main-header, .main-footer{
-    background-color: orange;
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem 0rem;
+    padding: 0rem 2rem;
 }
 
 .sidebar-header{
@@ -101,4 +95,86 @@ svg{
     margin-bottom: 8px;
 }
 
+/* ========================== MAIN HEADER */
 
+.main-header{
+    width: 100%;
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.header-search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.inner-bar{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.55rem;
+    background-color: var(--menu-bg);
+    border-radius: 4px;
+    padding: 0.75rem ;
+
+    & svg{
+        color: var(--secondary-text);
+    }
+}
+
+.inner-bar input{
+    width: 100%;
+    outline: transparent;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 11pt;
+    
+    &::placeholder{
+        color: var(--secondary-text);
+        
+    }
+}
+
+.username{
+    line-height: 1.5;
+    width: 350px;
+}
+
+.left-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.create-btn{
+    font-size: 11pt;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 0.5rem;
+    background-color: var(--menu-bg);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile button{
+    cursor: pointer;
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    background-color: var(--separator-color);
+    padding: 0.75rem;
+    border-radius: 4px;
+
+    & svg{
+        color: var(--text-color);
+        stroke-width: 2;
+    }
+}

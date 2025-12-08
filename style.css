@@ -157,6 +157,36 @@ svg{
     font-size: 16pt;
 }
 
+/* ================= TAB and Panels */
+.tab-container{
+    margin-top: 1.5rem;
+}
+
+.tab-nav{
+    display: flex;
+    border-bottom: 1px solid var(--separator-color);
+}
+
+.tab-nav button{
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-text);
+    cursor: pointer;
+    outline: transparent;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.tab-nav button:hover{
+    color: var(--text-color);
+}
+
+.tab-nav button:active{
+    color: var(--text-color);
+    font-weight: 500;
+}
 
 /* ================= Main FOOTER */
 .main-footer{
@@ -164,3 +194,6 @@ svg{
     padding: 0.75rem 0.5rem;
     text-align: center;
 }
+
+
+

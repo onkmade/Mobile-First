@@ -81,18 +81,29 @@
 
             <main class="feed">
                 <li class="condition-tag">HOME</li>
-                <div class="main-tab">
-                    <li class="tab-item">Board</li>
-                    <li class="tab-item">List</li>
-                    <li class="tab-item">Timeline</li>
-                    <li class="tab-item">Due Task</li>
-                    <li class="tab-item">On Delay</li>
+                <div class="tab-container">
+                    <!-- Tav Navigation -->
+                    <nav class="tab-nav">
+                        <button class="tab-btn active" role="tab" data-tab="Board" aria-selected="true" aria-controls="board-panel">Board</button>
+                        <button class="tab-btn" role="tab" data-tab="List" aria-selected="false" aria-controls="list-panel">List</button>
+                        <button class="tab-btn" role="tab" data-tab="Timeline" aria-selected="false" aria-controls="timeline-panel">Timeline</button>
+                        <button class="tab-btn" role="tab" data-tab="Due-Dates" aria-selected="false" aria-controls="duedates-panel">Due Dates</button>
+                        <button class="tab-btn" role="tab" data-tab="Delay-Tasks" aria-selected="false" aria-controls="delaytasks-panel">Delay Tasks</button>
+                    </nav>
+
+                    <!-- Tabs Panel -->
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="board-panel" role="tabpanel" aria-labelledby="Board">
+                            <h3>Board Content</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, tenetur!</p>
+                        </div>
+                    </div>
                 </div>
             </main>
 
-            <footer class="main-footer">
+            <!-- <footer class="main-footer">
                 THIS IS FOOTER
-            </footer>
+            </footer> -->
 
         </div>
     </div>

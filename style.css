@@ -25,6 +25,8 @@ body{
     font-family: 'Inter';
     background-color: var(--bg-color);
     color: var(--text-color);
+    list-style: none;
+    text-decoration: none;
 }
 
 .bundle{
@@ -48,7 +50,6 @@ body{
     flex-grow: 1;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    padding: 0rem 2rem;
 }
 
 .sidebar-header{
@@ -95,49 +96,16 @@ svg{
     margin-bottom: 8px;
 }
 
-/* ========================== MAIN HEADER */
 
+
+/* ========================== MAIN HEADER */
 .main-header{
+    margin-top: 8px;
     width: 100%;
-    padding: 0.5rem 0rem;
+    padding: 0rem 2rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
-}
-
-.header-search{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.inner-bar{
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.55rem;
-    background-color: var(--menu-bg);
-    border-radius: 4px;
-    padding: 0.75rem ;
-
-    & svg{
-        color: var(--secondary-text);
-    }
-}
-
-.inner-bar input{
-    width: 100%;
-    outline: transparent;
-    border: none;
-    background: none;
-    color: var(--text-color);
-    font-size: 11pt;
-    
-    &::placeholder{
-        color: var(--secondary-text);
-        
-    }
 }
 
 .username{
@@ -177,4 +145,22 @@ svg{
         color: var(--text-color);
         stroke-width: 2;
     }
+}
+
+/* ================= TASK FEED */
+.feed{
+    padding: 0rem 2rem;
+    margin-top: 2rem;
+}
+
+.condition-tag{
+    font-size: 16pt;
+}
+
+
+/* ================= Main FOOTER */
+.main-footer{
+    background-color: var(--menu-bg);
+    padding: 0.75rem 0.5rem;
+    text-align: center;
 }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for the main tab container */
+        .tab-ui-container {
+            padding: 20px;
+        }
+
+        /* Style for the navigation bar itself */
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #eee; /* Light gray line beneath tabs */
+        }
+
+        /* Style for individual tab buttons */
+        .tab-button {
+            background-color: transparent;
+            border: none;
+            padding: 10px 15px; /* Adjust padding as needed */
+            cursor: pointer;
+            font-size: 16px;
+            color: #555; /* Default text color */
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Active tab style */
+        .tab-button.active {
+            color: #000; /* Darker color for active tab */
+            font-weight: 500;
+        }
+
+        /* Underline effect for the active tab */
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; /* Position it exactly on the bottom border line */
+            left: 0;
+            width: 100%;
+            height: 2px; /* Thickness of the underline */
+            background-color: #000; /* Color of the active underline */
+        }
+
+        /* Hover effect for inactive tabs */
+        .tab-button:not(.active):hover {
+            color: #333;
+        }
+
+        /* Tab content panels */
+        .tab-panel {
+            padding-top: 20px;
+            display: none; /* Hide all content by default */
+        }
+
+        /* Show only the active panel */
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* Accessibility: use [hidden] attribute to ensure screen readers ignore inactive panels */
+        .tab-panel[hidden] {
+          display: none; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Inside the main-container, maybe right after the main-header -->
+    <div class="tab-ui-container">
+        <!-- Tab Navigation -->
+        <nav class="tab-nav" role="tablist">
+            <button class="tab-button active" data-tab="templates" role="tab" aria-selected="true" aria-controls="templates-panel">Templates</button>
+            <button class="tab-button" data-tab="company" role="tab" aria-selected="false" aria-controls="company-panel">Company</button>
+            <button class="tab-button" data-tab="public" role="tab" aria-selected="false" aria-controls="public-panel">Public</button>
+        </nav>
+
+        <!-- Tab Content -->
+        <div class="tab-content-container">
+            <div id="templates-panel" class="tab-panel active" role="tabpanel" aria-labelledby="templates">
+                <h3>Templates Content</h3>
+                <p>Details about available templates go here.</p>
+            </div>
+            <div id="company-panel" class="tab-panel" role="tabpanel" aria-labelledby="company" hidden>
+                <h3>Company Content</h3>
+                <p>Information specific to your company's section.</p>
+            </div>
+            <div id="public-panel" class="tab-panel" role="tabpanel" aria-labelledby="public" hidden>
+                <h3>Public Content</h3>
+                <p>Content visible to the general public.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.tab-button');
+        const panels = document.querySelectorAll('.tab-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 1. Remove 'active' class from all tabs and panels and hide inactive panels
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                panels.forEach(p => {
+                    p.classList.remove('active');
+                    p.setAttribute('hidden', true); // Use 'hidden' attribute for accessibility
+                });
+
+                // 2. Add 'active' class to the clicked tab and show its associated panel
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                const targetPanelId = tab.getAttribute('data-tab') + '-panel';
+                const targetPanel = document.getElementById(targetPanelId);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                    targetPanel.removeAttribute('hidden');
+                }
+            });
+        });
+
+            // Optionally, activate the first tab on page load
+            if (tabs.length > 0) {
+                tabs[0].click();
+            }
+        });
+    </script>
+</body>
+</html>

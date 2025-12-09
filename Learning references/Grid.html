@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Card Grid Demo</title>
+<style>
+  :root{
+    --bg: #2e2e2e;
+    --card-bg: #1f1f1f;
+    --gap: 1rem;
+    --card-min: 180px; /* change this to control min card size */
+  }
+
+  *{box-sizing: border-box}
+  body{
+    margin:0;
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--bg);
+    color: #eee;
+    padding: 2rem;
+  }
+
+  /* optional container to center/limit width */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card-grid{
+    display: grid;
+    /* recommended: reasonable min and flexible max (1fr) */
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min), 1fr));
+    gap: var(--gap);
+    width: 100%;
+  }
+
+  .card{
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid rgba(255,255,255,0.04);
+    display:flex;
+    flex-direction:column;
+    min-height: 80px;
+    /* prevent card content forcing huge width */
+    word-break: break-word;
+    overflow: hidden;
+  }
+
+  .card img{
+    width:100%;
+    height:140px;
+    object-fit: cover;
+    border-radius: 6px;
+    display:block;
+    margin-bottom: .75rem;
+  }
+
+  .card .title{
+    font-weight:600;
+    margin-bottom: .25rem;
+  }
+
+  .card .desc{
+    font-size: .95rem;
+    color: #cfcfcf;
+    flex:1;
+  }
+
+  /* small screens tweak */
+  @media (max-width:420px){
+    :root { --card-min: 140px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://picsum.photos/400/200?random=1" alt="">
+        <div class="title">Card 1</div>
+        <div class="desc">Short description.</div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/200?random=2" alt="">
+        <div class="title">Card 2</div>
+        <div class="desc">A longer description that demonstrates wrapping — the grid should keep cards equal and wrap properly as you add more cards.</div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/200?random=2" alt="">
+        <div class="title">Card 2</div>
+        <div class="desc">A longer description that demonstrates wrapping — the grid should keep cards equal and wrap properly as you add more cards.</div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/200?random=2" alt="">
+        <div class="title">Card 2</div>
+        <div class="desc">A longer description that demonstrates wrapping — the grid should keep cards equal and wrap properly as you add more cards.</div>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/400/200?random=2" alt="">
+        <div class="title">Card 2</div>
+        <div class="desc">A longer description that demonstrates wrapping — the grid should keep cards equal and wrap properly as you add more cards.</div>
+      </div>
+      <!-- duplicate a few more to test wrapping -->
+      <div class="card"><div class="title">Card 3</div><div class="desc">No image here but still wraps.</div></div>
+      <div class="card"><div class="title">Card 4</div><div class="desc">Another card.</div></div>
+      <div class="card"><div class="title">Card 5</div><div class="desc">Another card.</div></div>
+      <div class="card"><div class="title">Card 6</div><div class="desc">Another card.</div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -130,6 +130,7 @@ svg{
 }
 
 .create-btn{
+    color: var(--secondary-text);
     font-size: 11pt;
     display: flex;
     align-items: center;
@@ -141,6 +142,16 @@ svg{
     cursor: pointer;
     outline: 1px solid rgba(197, 197, 197, 0.5);
     box-shadow: 0 0 0 2px rgb(255 255 255 / 10%);
+    transition: all 0.3s ease;
+}
+
+.create-btn:hover{
+    color: var(--text-color);
+    box-shadow: 0 0 0 1px var(--text-color);
+
+    svg{
+        color: var(--text-color);
+    }
 }
 
 .profile button{
@@ -274,7 +285,11 @@ svg{
 
 .cor-btn:hover{
     color: var(--text-color);
-    border-color: var(--text-color) ;
+    box-shadow: 0 0 0 1px var(--text-color);
+
+    svg{
+        color: var(--text-color);
+    }
 }
 
 /* ================= Main FOOTER */
@@ -287,7 +302,7 @@ svg{
 /* =========================================== RECENT activity feed */
 
 .recently-opened-tag{
-    margin: 8px 0;
+    margin: 1rem 0;
     color: var(--secondary-text);
     font-size: 10pt;
 
@@ -298,3 +313,91 @@ svg{
         margin-right: 6px;
     }
 }
+
+.recently-feed{
+    display: grid;
+    justify-content: start;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, 22rem);
+    width: 100%;
+}
+
+.recent-items{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--menu-bg);
+    width: 22rem;
+    border-radius: 13.5px;
+}
+
+.recent-tab-header, .card-timeline{
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    svg{
+        color: var(--secondary-text) ;
+    }
+}
+
+.card-timeline{
+    margin-top: auto;
+    border-top: 1px solid var(--bg-color);
+
+}
+
+.category-name, .timedate-recent{
+    color: var(--border-color);
+    font-size: 11pt;
+
+    svg{
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 4px;
+        color: var(--border-color);
+    }
+}
+
+.card-title{
+    font-size: 16pt;
+    color: var(--secondary-text);
+    padding-inline: 0.5rem ;
+    margin: 16px 0px;
+}
+
+.line-seperator-recent{
+    height: 1px;
+    background-color: var(--separator-color);
+    margin: 0.25rem 0;
+}
+
+.view-task-btn{
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.5rem;
+    font-size: 11pt;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--secondary-text);
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 0 0 1px var(--separator-color);
+
+    svg{
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+    }
+}
+
+.view-task-btn:hover{
+    color: var(--text-color);
+    box-shadow: 0 0 0 1px var(--text-color);
+
+    svg{
+        color: var(--text-color);
+    }
+}
+

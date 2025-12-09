@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100svh;
+    font-family: "Inter";
+    background-color: #F0F2F5;
+    color: #202020;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.bundle{
+    padding: 1rem 10%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgba(10, 10, 10, 0.047);
+    backdrop-filter: blur(20px);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-user{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    right: 0;
+    left: 0.5;
+    background-color: white;
+    width: 13rem;
+    margin-top: 0.95rem;
+    margin-bottom: 0.95rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+    display: grid;
+    z-index: 10;
+    transform-origin: top right;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-btn{
+    color: steelblue;
+    font-size: 10pt;
+}
+
+.circle-profile{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    border-radius: 100%;
+    background-color: white;
+    cursor: pointer;
+    outline:none;
+    border: none;
+    box-shadow: 0 0 0 2px rgba(121, 121, 121, 0.229);
+}
+
+.circle-profile:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 1);
+}
+
+svg{
+    color: rgb(48, 48, 48);
+}
+
+.option{
+    border-top: 1px solid rgb(234, 234, 234) ;
+}
+
+.option-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.5rem;
+    transition: all 0.2s ease;
+    font-size: 11pt;
+}
+
+.option-btn:hover{
+    background-color: rgb(232, 242, 246);
+    color: steelblue;
+    transform: scale(1.015);
+}
+
+.option-btn.Sign-out:hover{
+    background-color: rgb(255, 242, 242);
+    color: tomato;
+    transform: scale(1.015);
+    cursor: pointer;
+}
+
+.Sign-out{
+    border-top: 1px solid rgb(234, 234, 234) ;
+}
+
+svg.option-icons{
+    width: 1.1rem;
+    color: inherit;
+}
+
+svg.option-icons:hover{
+    color: steelblue;
+    transform: scale(1.015);
+}
+
+svg.Sign-out:hover{
+    color: tomato;
+    transform: scale(1.015);
+}
+
+.view-profile{
+    padding: 0.45rem 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+    margin-top: 0.35rem;
+}
+
+.dropdown-menu.hidden{
+    display: none;
+}
+
+.dropdown-menu.opacity-0{
+    opacity: 0;
+}
+
+.dropdown-menu.opacity-100{
+    opacity: 1;
+}
+
+.dropdown-menu.scale-95{
+    transform: scale(0.95);
+}
+
+.dropdown-menu.scale-100{
+    transform: scale(1);
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css' )}}">
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/Learning references/dropdownmenu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bundle" id="bundle">
+        <header>
+            <h2>SH.</h2>
+            <nav>
+                <a href="">Home</a>
+                <a href="">Service</a>
+                <a href="">Something</a>
+                <a href="">Cookies</a>
+            </nav>
+
+            <div class="profile-user">
+                <button id="user-btn" onclick="Toggleuser()" class="circle-profile">
+                    <!-- <img src="" alt=""> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </button>
+                <div id="dropdown-menu" class="dropdown-menu opacity-0 scale-95 hidden">
+                    <div class="view-profile">
+                        <h4>User-name</h4>
+                        <a href="" class="view-btn">View-profile</a>
+                    </div>
+                    <div class="option">
+                        <a href="" class="option-btn">
+                            <svg class="option-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings">
+                                <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            Settings
+                        </a>
+                        <a href="" class="option-btn">
+                            <svg class="option-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette-icon lucide-palette">
+                                <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/>
+                                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                            </svg>
+                            Customization
+                        </a>
+                        <a href="" class="option-btn">
+                            <svg class="option-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-icon lucide-bell">
+                                <path d="M10.268 21a2 2 0 0 0 3.464 0"/>
+                                <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/>
+                            </svg>
+                            Notification
+                        </a>
+                        <a href="" class="option-btn">
+                            <svg class="option-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 16v-4"/>
+                                <path d="M12 8h.01"/>
+                            </svg>
+                            Support
+                        </a>
+                    </div>
+                    <div id="Sign-out" class="option-btn Sign-out">
+                        <svg class="option-icons sign-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out">
+                            <path d="m16 17 5-5-5-5"/>
+                            <path d="M21 12H9"/>
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                        </svg>
+                        Log-Out
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- <main>
+            THIS IS MAIN
+        </main>
+        <footer>
+            THIS IS FOOTER
+        </footer> -->
+    </div>
+
+    <!-- Script Here -->
+    <script>
+        const userBtn = document.getElementById('user-btn');
+        const Dropdown = document.getElementById('dropdown-menu');
+
+        function Toggleuser(){
+            const isHidden = Dropdown.classList.contains('hidden');
+
+            if(isHidden){
+                Dropdown.classList.remove('hidden');
+                setTimeout( () =>{
+                    Dropdown.classList.remove('opacity-0', 'scale-95');
+                    Dropdown.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            } else{
+                Dropdown.classList.remove('opacity-100', 'scale-100');
+                Dropdown.classList.add('opacity-0', 'scale-95');
+                setTimeout( ()=> {
+                    Dropdown.classList.add('hidden');
+                }, 150);
+            }
+        }
+
+        document.addEventListener('click', (event) => {
+            const bundle = document.getElementById('bundle');
+
+            if(!bundle.contains(event.target) && !Dropdown.classList.contains('hidden')){
+                Dropdown.classList.remove('opacity-100', 'scale-100');
+                Dropdown.classList.add('opacity-0', 'scale-95');
+                setTimeout( () =>{
+                    Dropdown.classList.add('hidden');
+                }, 150);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -154,6 +154,56 @@ svg{
     }
 }
 
+.profile{
+    position: relative;
+}
+
+.user-dropdownmenu{
+    position: absolute;
+    right: 0;
+    left: 0.1;
+    margin: 0.5rem 0;
+    background-color: var(--menu-bg);
+    padding: 0.5rem 0;
+    font-size: 11pt;
+    width: 12rem;
+    border-radius: 0.25rem;
+    z-index: 100;
+    transform-origin:right top;
+    transition: transform 0.2s ease, opacity 0.2s ease, scale 0.2s ease;
+}
+
+.user-dropdownmenu.hidden{
+    display:none;
+}
+
+.user-dropdownmenu.opa-0{
+    opacity: 0;
+}
+
+.user-dropdownmenu.scale-95{
+    transform: scale(0.95);
+}
+
+.user-dropdownmenu.opa-100{
+    opacity: 1;
+}
+
+.user-dropdownmenu.scale-100{   
+    transform: scale(1);
+}
+
+.downmenu-btn{
+    display: block;
+    padding: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.downmenu-btn:hover{
+    background-color: var(--hover-bg);
+    cursor: pointer;
+}
+
 .profile button{
     cursor: pointer;
     background-color: transparent;
@@ -318,7 +368,7 @@ svg{
     display: grid;
     justify-content: start;
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, 22rem);
+    grid-template-columns: repeat(auto-fit, 20rem);
     width: 100%;
 }
 
@@ -326,7 +376,7 @@ svg{
     display: flex;
     flex-direction: column;
     background-color: var(--menu-bg);
-    width: 22rem;
+    width: 20rem;
     border-radius: 13.5px;
 }
 
@@ -359,7 +409,7 @@ svg{
 }
 
 .card-title{
-    font-size: 16pt;
+    font-size: 14pt;
     color: var(--secondary-text);
     padding-inline: 0.5rem ;
     margin: 16px 0px;

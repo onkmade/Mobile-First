@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bundle">
+    <div class="bundle" id="bundle">
         <aside class="sidebar">
             <header class="sidebar-header">
                 <h3>TASK</h3>
@@ -71,9 +71,23 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
                     </div>
                     <div class="profile">
-                        <button type="button" class="profile-icon">
+                        <button type="button" class="profile-icon" id="profile-icon" onclick="usermenu()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                         </button>
+                        <div class="user-dropdownmenu opa-0 opa-100 scale-95 scale-100 hidden" id="user-dropdownmenu" role="tooltip">
+                            <li class="downmenu-btn">View Profile</li>
+                            <li class="downmenu-btn">Edit Profile</li>
+                            <li class="line-seperator"></li>
+                            <li class="downmenu-btn">Account Settings</li>
+                            <li class="downmenu-btn">Privacy Settings</li>
+                            <li class="downmenu-btn">Notification</li>
+                            <li class="line-seperator"></li>
+                            <li class="downmenu-btn">Language/Region</li> 
+                            <li class="downmenu-btn">Subscription</li>
+                            <li class="line-seperator"></li>
+                            <li class="downmenu-btn">Help</li>
+                            <li class="downmenu-btn">Logout</li>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -102,7 +116,7 @@
                             <div class="card-timeline btn">
                                 <div class="timedate-recent btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history-icon lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
-                                    <p>09 Dec 03:23 PM</p>
+                                    <p>1 min ago</p>
                                 </div>
                                 <button class="view-task-btn btn">
                                     <p>View Task</p>
@@ -125,30 +139,7 @@
                             <div class="card-timeline btn">
                                 <div class="timedate-recent btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history-icon lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
-                                    <p>09 Dec 03:23 PM</p>
-                                </div>
-                                <button class="view-task-btn btn">
-                                    <p>View Task</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="recent-items">
-                            <div class="recent-tab-header btn">
-                                <p class="category-name btn">
-                                    <svg class="dot-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag-icon lucide-tag"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
-                                    Professional
-                                </p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
-                            </div>
-                            <div class="recent-tab-title">
-                                <p class="card-title"> Completing the To-do Application within days ... </p>
-                            </div>
-
-                            <div class="card-timeline btn">
-                                <div class="timedate-recent btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-history-icon lucide-history"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
-                                    <p>09 Dec 03:23 PM</p>
+                                    <p>5 min ago</p>
                                 </div>
                                 <button class="view-task-btn btn">
                                     <p>View Task</p>
@@ -231,7 +222,7 @@
                    p.classList.remove('active');
                    p.setAttribute('hidden', true);
                });
-           
+               
                // Activate the clicked tab
                tab.classList.add('active');
                tab.setAttribute('aria-selected', 'true');
@@ -245,14 +236,14 @@
                    targetPanel.removeAttribute('hidden');
                }
            });
-       });
-   
-       // Optional: Automatically click the first tab on page load to ensure initial state is correct
-       if (tabs.length > 0) {
-           tabs[0].click();
-       }
+        });
+        
+        // Optional: Automatically click the first tab on page load to ensure initial state is correct
+        if (tabs.length > 0) {
+            tabs[0].click();
+        }
     });
-
     </script>
+<script src="app.js"></script>
 </body>
 </html>

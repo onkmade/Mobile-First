@@ -40,6 +40,14 @@ body{
     width: 100%;
 }
 
+.colored-username{
+    background: #FFFFFF;
+    background: linear-gradient(to top right, #FFFFFF 36%, #851E9F 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
 .sidebar{
     flex-basis: 15rem;
     background:var(--menu-bg);
@@ -148,6 +156,7 @@ svg{
 .create-btn:hover{
     color: var(--text-color);
     box-shadow: 0 0 0 1px var(--text-color);
+    text-shadow: 0px 0px 10px black;
 
     svg{
         color: var(--text-color);
@@ -378,6 +387,8 @@ svg{
     background-color: var(--menu-bg);
     width: 20rem;
     border-radius: 13.5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid var(--border-color); */
 }
 
 .recent-tab-header, .card-timeline{
@@ -412,7 +423,7 @@ svg{
     font-size: 14pt;
     color: var(--secondary-text);
     padding-inline: 0.75rem ;
-    margin: 16px 0px;
+    margin-bottom: 14px;
 }
 
 .line-seperator-recent{
@@ -449,5 +460,59 @@ svg{
     svg{
         color: var(--text-color);
     }
+}
+
+.white{
+    color: white;
+}
+
+.notwhite{
+    color: var(--text-color);
+}
+
+.dot-holder{
+    cursor: pointer;
+    position: relative;
+}
+
+.dot-menu{
+    position: absolute;
+    right:0;
+    margin: 10px;
+    background-color: var(--menu-bg);
+    padding: 0.375rem 0;
+    box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.1);
+    /* border: 1px solid var(--border-color); */
+    border-radius: 10px ;
+    width: 8rem;
+    font-size: 10pt;
+    color: var(--secondary-text);
+
+    svg{
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+}
+
+.dot-items{
+    padding: 0.375rem;
+}
+
+.dot-items:hover{
+    background-color: var(--hover-bg);
+}
+
+.dot-items.delete{
+    color: var(--delete-color);
+
+    svg{
+        color: var(--delete-color);
+    }
+}
+
+.line-seperator.dot{
+    margin: 6px 0;
 }
 

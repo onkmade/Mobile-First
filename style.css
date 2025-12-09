@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+.btn{
+    display: flex;
+    align-items: center;
+}
+
 :root {
     --bg-color: #2e2e2e;
     --menu-bg: #1e1e1e;
@@ -277,4 +282,19 @@ svg{
     background-color: var(--menu-bg);
     padding: 0.75rem 0.5rem;
     text-align: center;
+}
+
+/* =========================================== RECENT activity feed */
+
+.recently-opened-tag{
+    margin: 8px 0;
+    color: var(--secondary-text);
+    font-size: 10pt;
+
+    & svg{
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 6px;
+    }
 }

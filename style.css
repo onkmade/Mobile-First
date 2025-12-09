@@ -42,10 +42,11 @@ body{
 
 .colored-username{
     background: #FFFFFF;
-    background: linear-gradient(to top right, #FFFFFF 36%, #851E9F 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    background: linear-gradient(to right, #FFFFFF 0%, #419AFF 51%, #ff455b 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    font-weight: 600;
+    font-size: large;
 }
 
 .sidebar{
@@ -477,16 +478,18 @@ svg{
 
 .dot-menu{
     position: absolute;
-    right:0;
+    left:0;
     margin: 10px;
     background-color: var(--menu-bg);
     padding: 0.375rem 0;
     box-shadow: 0px 0px 2px 1px rgba(255, 255, 255, 0.1);
-    /* border: 1px solid var(--border-color); */
+    border: 1px solid var(--border-color);
     border-radius: 10px ;
     width: 8rem;
     font-size: 10pt;
     color: var(--secondary-text);
+    transform-origin: top left ;
+    transition: transform 0.2s ease, opacity 0.2s ease-in-out, scale 0.2s ease-in-out;
 
     svg{
         width: 14px;
@@ -516,3 +519,28 @@ svg{
     margin: 6px 0;
 }
 
+.dot3-btn{
+    border: none;
+    outline: transparent;
+    background: none;
+}
+
+.dot-menu.hidden{
+    display: none;
+}
+
+.dot-menu.opa-0{
+    opacity: 0;
+}
+
+.dot-menu.opa-100{
+    opacity: 1;
+}
+
+.dot-menu.scale-95{
+    transform: scale(0.95);
+}
+
+.dot-menu.scale-100{
+    transform: scale(1);
+}

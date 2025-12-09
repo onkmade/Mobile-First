@@ -515,32 +515,15 @@ svg{
     }
 }
 
-.line-seperator.dot{
-    margin: 6px 0;
-}
-
 .dot3-btn{
     border: none;
     outline: transparent;
     background: none;
 }
 
-.dot-menu.hidden{
-    display: none;
-}
-
-.dot-menu.opa-0{
-    opacity: 0;
-}
-
-.dot-menu.opa-100{
-    opacity: 1;
-}
-
-.dot-menu.scale-95{
-    transform: scale(0.95);
-}
-
-.dot-menu.scale-100{
-    transform: scale(1);
-}
+.line-seperator.dot{ margin: 6px 0; }
+.dot-menu.hidden{ display: none;}
+.dot-menu.opa-0{  opacity: 0;}
+.dot-menu.opa-100{ opacity: 1;}
+.dot-menu.scale-95{ transform: scale(0.95);}
+.dot-menu.scale-100{ transform: scale(1);}

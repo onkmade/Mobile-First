@@ -27,34 +27,41 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// Three dot button JS
+const dotButtons = document.querySelectorAll('.dot3-btn');
 
-const dotmenu = document.getElementById('dot-menu');
-const dot3btn = document.getElementById('dot3-btn');
+dotButtons.forEach(btn => {
+    const dropdown = btn.closest('.recent-tab-header').querySelector('.dot-menu');
 
-function threedotmenu(){
-    const isHidden = dotmenu.classList.contains('hidden');
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation(); 
 
-    if(isHidden){
-        dotmenu.classList.remove('hidden');
-        setTimeout( () => {
-            dotmenu.classList.add('opa-100', 'scale-100');
-            dotmenu.classList.remove('opa-0', 'scale-95');
-        }, 10);
-    }  else {
-        dotmenu.classList.remove('opa-100', 'scale-100');
-        dotmenu.classList.add('opa-0', 'scale-95');
-        setTimeout(()=>{ dotmenu.classList.add('hidden'); }, 150);
-    }
+        const isHidden = dropdown.classList.contains('hidden');
 
-    document.addEventListener('click', (event)=> {
-        if(!dotmenu) return;
-
-        const inside = event.target.closest('#dot-menu');
-        const toggle = event.target.closest('#dot3-btn');
-        if(!inside && !toggle && !dotmenu.classList.contains('hidden')){
-            dotmenu.classList.remove('opa-100', 'scale-100');
-            dotmenu.classList.add('opa-0', 'scale-95');
-            setTimeout(()=>{ dotmenu.classList.add('hidden'); }, 150);
+        if (isHidden) {
+            dropdown.classList.remove('hidden');
+            setTimeout(() => {
+                dropdown.classList.add('opa-100', 'scale-100');
+                dropdown.classList.remove('opa-0', 'scale-95');
+            }, 10);
+        } else {
+            dropdown.classList.remove('opa-100', 'scale-100');
+            dropdown.classList.add('opa-0', 'scale-95');
+            setTimeout(() => dropdown.classList.add('hidden'), 150);
         }
     });
-}
+});
+
+document.addEventListener('click', (event) => {
+    document.querySelectorAll('.dot-menu').forEach(dropdown => {
+        const btn = dropdown.closest('.recent-tab-header').querySelector('.dot3-btn');
+        const inside = event.target.closest('.dot-menu');
+        const toggle = event.target.closest('.dot3-btn');
+
+        if (!inside && !toggle && !dropdown.classList.contains('hidden')) {
+            dropdown.classList.remove('opa-100', 'scale-100');
+            dropdown.classList.add('opa-0', 'scale-95');
+            setTimeout(() => dropdown.classList.add('hidden'), 150);
+        }
+    });
+});

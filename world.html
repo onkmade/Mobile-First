@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column ;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #F0F2F5;
+            padding: 1rem;
+        }
+        
+        .main-container{
+            border-radius: 1rem;
+            flex: 1;
+            width: 100%;
+            background-color: yellowgreen;
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header > nav > button{
+            outline: transparent;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.45rem;
+            background-color: steelblue;
+            color: white;
+        }
+
+        nav{
+            background-color: rgb(172, 159, 255);
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+            max-width: fit-content;
+        }
+
+        .inner-container{
+            display: grid;
+            place-content: center;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="inner-container">
+            <header>
+                <nav>
+                    <button class="btn">Today's</button>
+                    <button class="btn">Tasks</button>
+                    <button class="btn">Completed</button>
+                </nav>
+            </header>
+        </div>
+    </div>
+</body>
+</html>

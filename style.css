@@ -495,12 +495,12 @@ svg{
         width: 14px;
         height: 14px;
         vertical-align: middle;
-        margin-right: 4px;
+        margin-right: 6px;
     }
 }
 
 .dot-items{
-    padding: 0.375rem;
+    padding: 0.375rem 0.5rem;
 }
 
 .dot-items:hover{

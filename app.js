@@ -28,16 +28,23 @@ document.addEventListener('click', (event) => {
 });
 
 // Three dot button JS
-const dotButtons = document.querySelectorAll('.dot3-btn');
-
 dotButtons.forEach(btn => {
     const dropdown = btn.closest('.recent-tab-header').querySelector('.dot-menu');
 
     btn.addEventListener('click', (e) => {
         e.stopPropagation(); 
 
-        const isHidden = dropdown.classList.contains('hidden');
+        // Close all other dropdowns first
+        document.querySelectorAll('.dot-menu').forEach(d => {
+            if (d !== dropdown && !d.classList.contains('hidden')) {
+                d.classList.remove('opa-100', 'scale-100');
+                d.classList.add('opa-0', 'scale-95');
+                setTimeout(() => d.classList.add('hidden'), 150);
+            }
+        });
 
+        // Toggle current dropdown
+        const isHidden = dropdown.classList.contains('hidden');
         if (isHidden) {
             dropdown.classList.remove('hidden');
             setTimeout(() => {
@@ -45,20 +52,6 @@ dotButtons.forEach(btn => {
                 dropdown.classList.remove('opa-0', 'scale-95');
             }, 10);
         } else {
-            dropdown.classList.remove('opa-100', 'scale-100');
-            dropdown.classList.add('opa-0', 'scale-95');
-            setTimeout(() => dropdown.classList.add('hidden'), 150);
-        }
-    });
-});
-
-document.addEventListener('click', (event) => {
-    document.querySelectorAll('.dot-menu').forEach(dropdown => {
-        const btn = dropdown.closest('.recent-tab-header').querySelector('.dot3-btn');
-        const inside = event.target.closest('.dot-menu');
-        const toggle = event.target.closest('.dot3-btn');
-
-        if (!inside && !toggle && !dropdown.classList.contains('hidden')) {
             dropdown.classList.remove('opa-100', 'scale-100');
             dropdown.classList.add('opa-0', 'scale-95');
             setTimeout(() => dropdown.classList.add('hidden'), 150);

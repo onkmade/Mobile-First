@@ -101,17 +101,15 @@
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // 1. Remove 'active' class from all tabs and panels and hide inactive panels
                 tabs.forEach(t => {
                     t.classList.remove('active');
                     t.setAttribute('aria-selected', 'false');
                 });
                 panels.forEach(p => {
                     p.classList.remove('active');
-                    p.setAttribute('hidden', true); // Use 'hidden' attribute for accessibility
+                    p.setAttribute('hidden', true); 
                 });
 
-                // 2. Add 'active' class to the clicked tab and show its associated panel
                 tab.classList.add('active');
                 tab.setAttribute('aria-selected', 'true');
                 const targetPanelId = tab.getAttribute('data-tab') + '-panel';
@@ -123,7 +121,6 @@
             });
         });
 
-            // Optionally, activate the first tab on page load
             if (tabs.length > 0) {
                 tabs[0].click();
             }

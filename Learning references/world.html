@@ -27,45 +27,63 @@
             width: 100%;
             background-color: yellowgreen;
             padding: 0.75rem;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: 1fr auto ;
         }
 
-        header > nav > button{
-            outline: transparent;
+        .btn{
             border: none;
-            padding: 0.5rem 0.75rem;
-            border-radius: 0.45rem;
             background-color: steelblue;
             color: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
         }
 
         nav{
-            background-color: rgb(172, 159, 255);
-            padding: 0.5rem;
-            border-radius: 0.75rem;
+            background: yellow;
             max-width: fit-content;
+            padding: 0.375rem;
+            border-radius: 12px;
         }
 
-        .inner-container{
+        header{
             display: grid;
             place-content: center;
-            flex: 1;
         }
+
     </style>
 </head>
 <body>
+    <!-- Main Container to wrap the things inside -->
     <div class="main-container">
-        <div class="inner-container">
-            <header>
-                <nav>
-                    <button class="btn">Today's</button>
-                    <button class="btn">Tasks</button>
-                    <button class="btn">Completed</button>
-                </nav>
-            </header>
-        </div>
+        <header>
+            <nav></nav>
+        </header>
+        <main>
+            <section id="home">Home</section>
+            <section id="about">About</section>
+            <section id="services">Services</section>
+
+            <!-- if you want you can put Aside inside the main -->
+            <aside>
+                <ul>
+                    <li class="sidebar-links">Options</li>
+                    <li class="sidebar-links">Options</li>
+                    <li class="sidebar-links">Options</li>
+                    <li class="sidebar-links">Options</li>
+                    <li class="sidebar-links">Options</li>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            <section class="footer-sections"></section>
+            <section class="footer-sections"></section>
+            <section class="footer-sections"></section>
+            <section class="footer-sections"></section>
+        </footer>
     </div>
 </body>
 </html>
+
+
 

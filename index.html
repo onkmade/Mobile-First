@@ -253,24 +253,20 @@
             
        tabs.forEach(tab => {
            tab.addEventListener('click', () => {
-               // Deactivate all current tabs
                tabs.forEach(t => {
                    t.classList.remove('active');
                    t.setAttribute('aria-selected', 'false');
                });
            
-               // Hide all current panels
                panels.forEach(p => {
                    p.classList.remove('active');
                    p.setAttribute('hidden', true);
                });
                
-               // Activate the clicked tab
                tab.classList.add('active');
                tab.setAttribute('aria-selected', 'true');
            
-               // Show the target panel using aria-controls
-               const targetPanelId = tab.getAttribute('aria-controls'); // Get the ID directly from aria-controls
+               const targetPanelId = tab.getAttribute('aria-controls'); 
                const targetPanel = document.getElementById(targetPanelId);
            
                if (targetPanel) {
@@ -280,7 +276,6 @@
            });
         });
         
-        // Optional: Automatically click the first tab on page load to ensure initial state is correct
         if (tabs.length > 0) {
             tabs[0].click();
         }

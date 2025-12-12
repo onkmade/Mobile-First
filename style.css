@@ -540,4 +540,5 @@ svg{
     height: 100%;
     background-color:rgba(0, 0, 0, 0.722);
     z-index: 100;
+    display: none;
 }
